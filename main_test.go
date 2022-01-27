@@ -1,7 +1,7 @@
 package bar_test
 
 import (
-	bar "go118bug"
+	bar "github.com/reasno/go1.18beta1bug"
 	"testing"
 )
 
