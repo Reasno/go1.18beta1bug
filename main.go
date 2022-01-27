@@ -1,19 +1,18 @@
 package bar
 
 type Data[K comparable, V any] struct {
-	ch chan int
+	field int
 }
 
 type Dataset[K comparable, V any] struct{}
 
 func (m *Dataset[K, V]) GetData() *Data[K, V] {
-	c := make(chan int, 1)
-	d := &Data[K, V]{ch: c}
+	d := &Data[K, V]{field: 1}
 	return d
 }
 
-var DefaultMetadataSet = Dataset[string, any]{}
+var DefaultDataset = Dataset[string, any]{}
 
 func GetData() *Data[string, any] {
-	return DefaultMetadataSet.GetData()
+	return DefaultDataset.GetData()
 }
