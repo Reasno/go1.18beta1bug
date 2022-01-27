@@ -5,6 +5,6 @@ import (
 	"testing"
 )
 
-func TestContextMeta_crud(t *testing.T) {
+func Test(t *testing.T) {
 	bar.GetData()
 }
